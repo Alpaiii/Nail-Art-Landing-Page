@@ -1,0 +1,72 @@
+---
+import { siteConfig } from "../config/site";
+import { buildWhatsAppUrl } from "../utils/whatsapp";
+
+const { hero } = siteConfig;
+const bookUrl = buildWhatsAppUrl();
+---
+
+<section id="home" class="relative overflow-hidden bg-background pt-24 lg:pt-28">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-6 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:pb-24 lg:pt-10">
+    <div class="reveal text-center lg:text-left">
+      <p class="section-eyebrow">{siteConfig.name}</p>
+      <h1
+        class="font-heading font-semibold leading-[1.08]"
+        style="font-size: clamp(2.25rem, 6vw, 4rem);"
+      >
+        {hero.headline}
+      </h1>
+      <p class="mx-auto mt-5 max-w-xl text-base text-text/75 sm:text-lg lg:mx-0">
+        {hero.subheadline}
+      </p>
+
+      <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full sm:w-auto">
+          Book Your Appointment
+        </a>
+        <a href="#gallery" class="btn btn-outline w-full sm:w-auto">
+          Explore Our Work
+        </a>
+      </div>
+
+      {
+        (hero.showRating || hero.showStats) && (
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-text/70 lg:justify-start">
+            {hero.showRating && (
+              <span class="flex items-center gap-2">
+                <span class="flex text-accent" aria-hidden="true">
+                  {[1, 2, 3, 4, 5].map(() => (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z" />
+                    </svg>
+                  ))}
+                </span>
+                <span class="sr-only">{hero.rating} out of 5 stars</span>
+                <span>
+                  <strong class="font-semibold text-text">{hero.rating}</strong> rating
+                </span>
+              </span>
+            )}
+            {hero.showStats && <span>{hero.ratingLabel}</span>}
+          </div>
+        )
+      }
+    </div>
+
+    <div class="reveal relative mx-auto w-full max-w-lg lg:max-w-none">
+      <div class="absolute -inset-4 rounded-[2rem] bg-secondary/50 blur-2xl" aria-hidden="true"></div>
+      <img
+        src={hero.image}
+        alt={hero.imageAlt}
+        width="900"
+        height="1100"
+        loading="eager"
+        fetchpriority="high"
+        class="relative aspect-[9/10] w-full rounded-[1.75rem] object-cover shadow-xl shadow-text/10"
+      />
+      <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-text shadow-lg sm:left-auto sm:right-6 sm:translate-x-0">
+        Walk-ins by appointment
+      </div>
+    </div>
+  </div>
+</section>

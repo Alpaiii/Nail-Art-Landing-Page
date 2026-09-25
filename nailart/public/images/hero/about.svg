@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900" role="img">
+  <defs><linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F7ECE8"/><stop offset="1" stop-color="#E8D5D5"/>
+  </linearGradient></defs>
+  
+    <rect width="800" height="900" fill="url(#aboutBg)"/>
+    <circle cx="400" cy="410" r="270" fill="#FFF9F7" opacity="0.75"/>
+    <circle cx="400" cy="410" r="270" fill="none" stroke="#C9A46C" stroke-opacity="0.4" stroke-width="2"/>
+    <g transform="rotate(-18 400 760)"><clipPath id="nailclip5"><path d="M 240 408 C 240 336 260.8 300 305 300 C 349.2 300 370 336 370 408 L 351.8 582 Q 305 609 258.2 582 Z"/></clipPath>
+  <g>
+    <path d="M 240 408 C 240 336 260.8 300 305 300 C 349.2 300 370 336 370 408 L 351.8 582 Q 305 609 258.2 582 Z" fill="#F3E1D8"/>
+    <g clip-path="url(#nailclip5)">
+      <path d="M 247.8 540 Q 305 522 362.2 540" stroke="#FFFFFF" stroke-width="7" fill="none"/>
+      <ellipse cx="281.6" cy="378" rx="11.7" ry="39" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 281.6 378)"/>
+      <rect x="240" y="516" width="130" height="120" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 240 408 C 240 336 260.8 300 305 300 C 349.2 300 370 336 370 408 L 351.8 582 Q 305 609 258.2 582 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+    <clipPath id="nailclip6"><path d="M 330 388.8 C 330 309.6 352.4 270 400 270 C 447.6 270 470 309.6 470 388.8 L 450.4 580.2 Q 400 609.9000000000001 349.6 580.2 Z"/></clipPath>
+  <g>
+    <path d="M 330 388.8 C 330 309.6 352.4 270 400 270 C 447.6 270 470 309.6 470 388.8 L 450.4 580.2 Q 400 609.9000000000001 349.6 580.2 Z" fill="#EFD9D2"/>
+    <g clip-path="url(#nailclip6)">
+      <circle cx="400.0" cy="380.6" r="20.2" fill="#FFFFFF"/><circle cx="426.6" cy="399.9" r="20.2" fill="#FFFFFF"/><circle cx="416.5" cy="431.3" r="20.2" fill="#FFFFFF"/><circle cx="383.5" cy="431.3" r="20.2" fill="#FFFFFF"/><circle cx="373.4" cy="399.9" r="20.2" fill="#FFFFFF"/><circle cx="400" cy="408.6" r="14.0" fill="#C9A46C"/>
+      <ellipse cx="374.8" cy="355.8" rx="12.6" ry="42.9" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 374.8 355.8)"/>
+      <rect x="330" y="507.6" width="140" height="132" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 330 388.8 C 330 309.6 352.4 270 400 270 C 447.6 270 470 309.6 470 388.8 L 450.4 580.2 Q 400 609.9000000000001 349.6 580.2 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g>
+    <g transform="rotate(18 400 760)"><clipPath id="nailclip7"><path d="M 430 408 C 430 336 450.8 300 495 300 C 539.2 300 560 336 560 408 L 541.8 582 Q 495 609 448.2 582 Z"/></clipPath>
+  <g>
+    <path d="M 430 408 C 430 336 450.8 300 495 300 C 539.2 300 560 336 560 408 L 541.8 582 Q 495 609 448.2 582 Z" fill="#E4C4BD"/>
+    <g clip-path="url(#nailclip7)">
+      <path d="M 443 375 Q 495 405 547 360" stroke="#C9A46C" stroke-width="7" fill="none"/>
+        <path d="M 449.5 465 Q 501.5 444 540.5 486" stroke="#C9A46C" stroke-width="5" fill="none" opacity="0.85"/>
+        <path d="M 462.5 540 Q 495 522 534 552" stroke="#FFF9F7" stroke-width="4" fill="none" opacity="0.6"/>
+      <ellipse cx="471.6" cy="378" rx="11.7" ry="39" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 471.6 378)"/>
+      <rect x="430" y="516" width="130" height="120" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 430 408 C 430 336 450.8 300 495 300 C 539.2 300 560 336 560 408 L 541.8 582 Q 495 609 448.2 582 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+    <path d="M 620 218 Q 622.64 237.36 642 240
+    Q 622.64 242.64 620 262
+    Q 617.36 242.64 598 240
+    Q 617.36 237.36 620 218 Z" fill="#C9A46C" opacity="1"/><path d="M 180 314 Q 181.92 328.08 196 330
+    Q 181.92 331.92 180 346
+    Q 178.08 331.92 164 330
+    Q 178.08 328.08 180 314 Z" fill="#B78B8B" opacity="0.8"/><path d="M 590 602 Q 592.16 617.84 608 620
+    Q 592.16 622.16 590 638
+    Q 587.84 622.16 572 620
+    Q 587.84 617.84 590 602 Z" fill="#C9A46C" opacity="1"/>
+</svg>

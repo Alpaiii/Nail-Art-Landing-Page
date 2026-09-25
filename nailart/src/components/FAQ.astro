@@ -1,0 +1,17 @@
+---
+import { faqItems } from "../data/faq";
+import FAQItem from "./FAQItem.astro";
+---
+
+<section id="faq" class="section bg-background">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-title">Questions, answered</h2>
+    </div>
+
+    <div class="reveal mt-9 divide-y divide-secondary rounded-card border border-secondary bg-white/70">
+      {faqItems.map((item) => <FAQItem item={item} />)}
+    </div>
+  </div>
+</section>

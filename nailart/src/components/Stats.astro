@@ -1,0 +1,22 @@
+---
+import type { Stat } from "../data/about";
+
+interface Props {
+  stats: Stat[];
+}
+
+const { stats } = Astro.props;
+---
+
+<div class="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
+  {
+    stats.map((stat) => (
+      <div class="rounded-card border border-secondary bg-white/60 px-4 py-6 text-center">
+        <p class="font-heading text-3xl font-semibold text-text md:text-4xl">{stat.value}</p>
+        <p class="mt-2 text-xs font-medium uppercase tracking-wider text-text/60 sm:text-sm">
+          {stat.label}
+        </p>
+      </div>
+    ))
+  }
+</div>

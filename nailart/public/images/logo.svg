@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80" role="img">
+  <defs></defs>
+  
+    <circle cx="36" cy="40" r="30" fill="#FFF9F7" stroke="#C9A46C" stroke-width="2.5"/>
+    <text x="36" y="50" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#B78B8B">SN</text>
+    <text x="80" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#2B2525">Signature</text>
+    <text x="80" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="24" letter-spacing="5" fill="#B78B8B">NAILS</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100" role="img">
+  <defs><linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFF9F7"/><stop offset="1" stop-color="#E8D5D5"/>
+  </linearGradient><radialGradient id="heroGlow" cx="0.5" cy="0.42" r="0.55">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient></defs>
+  
+    <rect width="900" height="1100" fill="url(#heroBg)"/>
+    <circle cx="450" cy="470" r="330" fill="url(#heroGlow)"/>
+    <circle cx="450" cy="470" r="330" fill="none" stroke="#C9A46C" stroke-opacity="0.35" stroke-width="2"/>
+    <g transform="rotate(-26 450 880)"><clipPath id="nailclip0"><path d="M 210 459.6 C 210 373.2 234 330 285 330 C 336 330 360 373.2 360 459.6 L 339 668.4 Q 285 700.8 231 668.4 Z"/></clipPath>
+  <g>
+    <path d="M 210 459.6 C 210 373.2 234 330 285 330 C 336 330 360 373.2 360 459.6 L 339 668.4 Q 285 700.8 231 668.4 Z" fill="#F3E1D8"/>
+    <g clip-path="url(#nailclip0)">
+      <path d="M 222 538.8 Q 285 582 348 528" stroke="#C9A46C" stroke-width="6" fill="none"/>
+      <ellipse cx="258" cy="423.6" rx="13.5" ry="46.800000000000004" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 258 423.6)"/>
+      <rect x="210" y="589.2" width="150" height="144" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 210 459.6 C 210 373.2 234 330 285 330 C 336 330 360 373.2 360 459.6 L 339 668.4 Q 285 700.8 231 668.4 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+    <g transform="rotate(-13 450 880)"><clipPath id="nailclip1"><path d="M 305 438.6 C 305 346.2 329.8 300 382.5 300 C 435.2 300 460 346.2 460 438.6 L 438.3 661.9 Q 382.5 696.55 326.7 661.9 Z"/></clipPath>
+  <g>
+    <path d="M 305 438.6 C 305 346.2 329.8 300 382.5 300 C 435.2 300 460 346.2 460 438.6 L 438.3 661.9 Q 382.5 696.55 326.7 661.9 Z" fill="#F5E6DF"/>
+    <g clip-path="url(#nailclip1)">
+      <path d="M 305 554.1 Q 382.5 531 460 554.1 L 460 762 L 305 762 Z" fill="#FFFFFF"/>
+      <ellipse cx="354.6" cy="400.1" rx="13.95" ry="50.050000000000004" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 354.6 400.1)"/>
+      <rect x="305" y="577.2" width="155" height="154" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 305 438.6 C 305 346.2 329.8 300 382.5 300 C 435.2 300 460 346.2 460 438.6 L 438.3 661.9 Q 382.5 696.55 326.7 661.9 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+    <clipPath id="nailclip2"><path d="M 375 427.6 C 375 329.2 400.6 280 455 280 C 509.4 280 535 329.2 535 427.6 L 512.6 665.4 Q 455 702.3 397.4 665.4 Z"/></clipPath>
+  <g>
+    <path d="M 375 427.6 C 375 329.2 400.6 280 455 280 C 509.4 280 535 329.2 535 427.6 L 512.6 665.4 Q 455 702.3 397.4 665.4 Z" fill="#EFD9D2"/>
+    <g clip-path="url(#nailclip2)">
+      <circle cx="455.0" cy="420.2" r="23.0" fill="#FFFFFF"/><circle cx="485.4" cy="442.3" r="23.0" fill="#FFFFFF"/><circle cx="473.8" cy="478.1" r="23.0" fill="#FFFFFF"/><circle cx="436.2" cy="478.1" r="23.0" fill="#FFFFFF"/><circle cx="424.6" cy="442.3" r="23.0" fill="#FFFFFF"/><circle cx="455" cy="452.2" r="16.0" fill="#C9A46C"/>
+      <ellipse cx="426.2" cy="386.6" rx="14.399999999999999" ry="53.300000000000004" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 426.2 386.6)"/>
+      <rect x="375" y="575.2" width="160" height="164" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 375 427.6 C 375 329.2 400.6 280 455 280 C 509.4 280 535 329.2 535 427.6 L 512.6 665.4 Q 455 702.3 397.4 665.4 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g>
+    <g transform="rotate(13 450 880)"><clipPath id="nailclip3"><path d="M 445 438.6 C 445 346.2 469.8 300 522.5 300 C 575.2 300 600 346.2 600 438.6 L 578.3 661.9 Q 522.5 696.55 466.7 661.9 Z"/></clipPath>
+  <g>
+    <path d="M 445 438.6 C 445 346.2 469.8 300 522.5 300 C 575.2 300 600 346.2 600 438.6 L 578.3 661.9 Q 522.5 696.55 466.7 661.9 Z" fill="#E9C9C2"/>
+    <g clip-path="url(#nailclip3)">
+      <path d="M 445 554.1 Q 522.5 531 600 554.1 L 600 762 L 445 762 Z" fill="#FFFFFF"/>
+        <path d="M 451.2 550.25 Q 522.5 525.225 593.8 550.25" stroke="#C9A46C" stroke-width="8" fill="none"/>
+      <ellipse cx="494.6" cy="400.1" rx="13.95" ry="50.050000000000004" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 494.6 400.1)"/>
+      <rect x="445" y="577.2" width="155" height="154" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 445 438.6 C 445 346.2 469.8 300 522.5 300 C 575.2 300 600 346.2 600 438.6 L 578.3 661.9 Q 522.5 696.55 466.7 661.9 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+    <g transform="rotate(26 450 880)"><clipPath id="nailclip4"><path d="M 545 459.6 C 545 373.2 569 330 620 330 C 671 330 695 373.2 695 459.6 L 674 668.4 Q 620 700.8 566 668.4 Z"/></clipPath>
+  <g>
+    <path d="M 545 459.6 C 545 373.2 569 330 620 330 C 671 330 695 373.2 695 459.6 L 674 668.4 Q 620 700.8 566 668.4 Z" fill="#DCC3BC"/>
+    <g clip-path="url(#nailclip4)">
+      <path d="M 560 420 Q 620 456 680 402" stroke="#C9A46C" stroke-width="7" fill="none"/>
+        <path d="M 567.5 528 Q 627.5 502.79999999999995 672.5 553.2" stroke="#C9A46C" stroke-width="5" fill="none" opacity="0.85"/>
+        <path d="M 582.5 618 Q 620 596.4 665 632.4" stroke="#FFF9F7" stroke-width="4" fill="none" opacity="0.6"/>
+      <ellipse cx="593" cy="423.6" rx="13.5" ry="46.800000000000004" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 593 423.6)"/>
+      <rect x="545" y="589.2" width="150" height="144" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 545 459.6 C 545 373.2 569 330 620 330 C 671 330 695 373.2 695 459.6 L 674 668.4 Q 620 700.8 566 668.4 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+    <path d="M 180 234 Q 183.12 256.88 206 260
+    Q 183.12 263.12 180 286
+    Q 176.88 263.12 154 260
+    Q 176.88 256.88 180 234 Z" fill="#C9A46C" opacity="1"/><path d="M 730 330 Q 732.4 347.6 750 350
+    Q 732.4 352.4 730 370
+    Q 727.6 352.4 710 350
+    Q 727.6 347.6 730 330 Z" fill="#C9A46C" opacity="1"/><path d="M 660 166 Q 661.68 178.32 674 180
+    Q 661.68 181.68 660 194
+    Q 658.32 181.68 646 180
+    Q 658.32 178.32 660 166 Z" fill="#B78B8B" opacity="0.8"/>
+    <path d="M 230 604 Q 231.92 618.08 246 620
+    Q 231.92 621.92 230 636
+    Q 228.08 621.92 214 620
+    Q 228.08 618.08 230 604 Z" fill="#B78B8B" opacity="0.7"/><path d="M 720 616 Q 722.88 637.12 744 640
+    Q 722.88 642.88 720 664
+    Q 717.12 642.88 696 640
+    Q 717.12 637.12 720 616 Z" fill="#C9A46C" opacity="1"/><path d="M 450 942 Q 452.16 957.84 468 960
+    Q 452.16 962.16 450 978
+    Q 447.84 962.16 432 960
+    Q 447.84 957.84 450 942 Z" fill="#B78B8B" opacity="0.6"/>
+</svg>

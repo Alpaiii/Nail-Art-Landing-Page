@@ -1,0 +1,39 @@
+---
+import { pricingRows } from "../data/services";
+---
+
+<section id="pricing" class="section bg-background">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="section-eyebrow">Pricing</p>
+      <h2 class="section-title">Transparent starting prices</h2>
+      <p class="section-lead mx-auto">
+        No hidden fees. You'll always confirm the final price before we start.
+      </p>
+    </div>
+
+    <div class="reveal mt-10 overflow-hidden rounded-card border border-secondary bg-white/70">
+      <ul>
+        {
+          pricingRows.map((row, index) => (
+            <li
+              class:list={[
+                "flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-5 py-4 sm:px-7",
+                index % 2 === 1 && "bg-secondary/40",
+                index > 0 && "border-t border-secondary",
+              ]}
+            >
+              <span class="font-heading text-base font-medium text-text sm:text-lg">{row.name}</span>
+              <span class="text-sm text-text/50">{row.duration}</span>
+              <span class="ml-auto text-base font-semibold text-text sm:text-lg">{row.price}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <p class="mt-4 text-center text-sm italic text-text/60">
+      Prices may vary depending on design complexity.
+    </p>
+  </div>
+</section>

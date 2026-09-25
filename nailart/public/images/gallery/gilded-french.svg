@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img">
+  <defs><linearGradient id="gBg-gilded-french" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#EFE5D6"/><stop offset="1" stop-color="#DCCBAE"/>
+  </linearGradient><linearGradient id="gNail-gilded-french" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#EBDCC8"/><stop offset="1" stop-color="#EFE5D6"/>
+  </linearGradient></defs>
+  
+      <rect width="800" height="800" fill="url(#gBg-gilded-french)"/>
+      <circle cx="400" cy="370" r="265" fill="#FFF9F7" opacity="0.6"/>
+      <circle cx="400" cy="370" r="265" fill="none" stroke="#C9A46C" stroke-opacity="0.3" stroke-width="2"/>
+      <g transform="rotate(-8 400 640)"><clipPath id="nailclip32"><path d="M 255 301.79999999999995 C 255 210.6 279 165 330 165 C 381 165 405 210.6 405 301.79999999999995 L 384 522.2 Q 330 556.4000000000001 276 522.2 Z"/></clipPath>
+  <g>
+    <path d="M 255 301.79999999999995 C 255 210.6 279 165 330 165 C 381 165 405 210.6 405 301.79999999999995 L 384 522.2 Q 330 556.4000000000001 276 522.2 Z" fill="url(#gNail-gilded-french)"/>
+    <g clip-path="url(#nailclip32)">
+      <path d="M 255 415.8 Q 330 393 405 415.8 L 405 621 L 255 621 Z" fill="#FFFFFF"/>
+        <path d="M 261 412 Q 330 387.29999999999995 399 412" stroke="#C9A46C" stroke-width="8" fill="none"/>
+      <ellipse cx="303" cy="263.8" rx="13.5" ry="49.4" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 303 263.8)"/>
+      <rect x="255" y="438.59999999999997" width="150" height="152" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 255 301.79999999999995 C 255 210.6 279 165 330 165 C 381 165 405 210.6 405 301.79999999999995 L 384 522.2 Q 330 556.4000000000001 276 522.2 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+      <path d="M 645 181 Q 647.88 202.12 669 205
+    Q 647.88 207.88 645 229
+    Q 642.12 207.88 621 205
+    Q 642.12 202.12 645 181 Z" fill="#C9A46C" opacity="1"/><path d="M 160 247 Q 162.16 262.84 178 265
+    Q 162.16 267.16 160 283
+    Q 157.84 267.16 142 265
+    Q 157.84 262.84 160 247 Z" fill="#B78B8B" opacity="0.75"/><path d="M 620 622 Q 622.16 637.84 638 640
+    Q 622.16 642.16 620 658
+    Q 617.84 642.16 602 640
+    Q 617.84 637.84 620 622 Z" fill="#C9A46C" opacity="1"/><path d="M 185 586 Q 186.68 598.32 199 600
+    Q 186.68 601.68 185 614
+    Q 183.32 601.68 171 600
+    Q 183.32 598.32 185 586 Z" fill="#B78B8B" opacity="0.6"/>
+      <text x="400" y="748" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="4" fill="#2B2525" opacity="0.55">LUXURY</text>
+</svg>

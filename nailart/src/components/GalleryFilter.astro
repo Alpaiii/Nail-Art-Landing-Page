@@ -1,0 +1,18 @@
+---
+import { galleryCategories } from "../data/gallery";
+---
+
+<div class="reveal mt-9 flex flex-wrap justify-center gap-2 sm:gap-3" role="group" aria-label="Filter gallery by category">
+  {
+    galleryCategories.map((category) => (
+      <button
+        type="button"
+        class="filter-btn rounded-full border px-4 py-2 text-sm font-medium transition-colors"
+        data-filter={category}
+        aria-pressed={category === "All" ? "true" : "false"}
+      >
+        {category}
+      </button>
+    ))
+  }
+</div>

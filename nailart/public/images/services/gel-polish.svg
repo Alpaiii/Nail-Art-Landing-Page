@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs><linearGradient id="svcBg-gel-polish" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFF9F7"/><stop offset="1" stop-color="#F1E2DC"/>
+  </linearGradient></defs>
+  
+      <rect width="800" height="600" fill="url(#svcBg-gel-polish)"/>
+      <circle cx="400" cy="300" r="215" fill="#E8D5D5" opacity="0.55"/>
+      <g>
+        <rect x="345" y="175" width="110" height="60" rx="12" fill="#2B2525"/>
+        <rect x="378" y="225" width="44" height="40" fill="#2B2525" opacity="0.85"/>
+        <rect x="310" y="258" width="180" height="180" rx="26" fill="#EBC7C4" stroke="#2B2525" stroke-opacity="0.15" stroke-width="2"/>
+        <rect x="330" y="310" width="140" height="70" rx="10" fill="#FFF9F7" opacity="0.85"/>
+        <circle cx="400" cy="345" r="20" fill="none" stroke="#C9A46C" stroke-width="4"/>
+      </g>
+      <g transform="rotate(-24 220 460)"><clipPath id="nailclip10"><path d="M 160 386.4 C 160 328.8 176 300 210 300 C 244 300 260 328.8 260 386.4 L 246 525.6 Q 210 547.2 174 525.6 Z"/></clipPath>
+  <g>
+    <path d="M 160 386.4 C 160 328.8 176 300 210 300 C 244 300 260 328.8 260 386.4 L 246 525.6 Q 210 547.2 174 525.6 Z" fill="#EBC7C4"/>
+    <g clip-path="url(#nailclip10)">
+      <ellipse cx="196" cy="372" rx="10" ry="33.6" fill="#FFFFFF" opacity="0.5" transform="rotate(-18 196 372)"/>
+      <ellipse cx="192" cy="362.4" rx="9" ry="31.200000000000003" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 192 362.4)"/>
+      <rect x="160" y="472.79999999999995" width="100" height="96" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 160 386.4 C 160 328.8 176 300 210 300 C 244 300 260 328.8 260 386.4 L 246 525.6 Q 210 547.2 174 525.6 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+      <g transform="rotate(24 580 460)"><clipPath id="nailclip11"><path d="M 540 386.4 C 540 328.8 556 300 590 300 C 624 300 640 328.8 640 386.4 L 626 525.6 Q 590 547.2 554 525.6 Z"/></clipPath>
+  <g>
+    <path d="M 540 386.4 C 540 328.8 556 300 590 300 C 624 300 640 328.8 640 386.4 L 626 525.6 Q 590 547.2 554 525.6 Z" fill="#EBC7C4"/>
+    <g clip-path="url(#nailclip11)">
+      <path d="M 540 458.4 Q 590 444 640 458.4 L 640 588 L 540 588 Z" fill="#FFFFFF"/>
+      <ellipse cx="572" cy="362.4" rx="9" ry="31.200000000000003" fill="#FFFFFF" opacity="0.45" transform="rotate(-16 572 362.4)"/>
+      <rect x="540" y="472.79999999999995" width="100" height="96" fill="#2B2525" opacity="0.05"/>
+    </g>
+    <path d="M 540 386.4 C 540 328.8 556 300 590 300 C 624 300 640 328.8 640 386.4 L 626 525.6 Q 590 547.2 554 525.6 Z" fill="none" stroke="#2B2525" stroke-opacity="0.12" stroke-width="2"/>
+  </g></g>
+      <path d="M 630 150 Q 632.4 167.6 650 170
+    Q 632.4 172.4 630 190
+    Q 627.6 172.4 610 170
+    Q 627.6 167.6 630 150 Z" fill="#C9A46C" opacity="1"/><path d="M 175 174 Q 176.92 188.08 191 190
+    Q 176.92 191.92 175 206
+    Q 173.08 191.92 159 190
+    Q 173.08 188.08 175 174 Z" fill="#B78B8B" opacity="0.8"/>
+</svg>

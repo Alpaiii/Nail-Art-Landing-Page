@@ -1,0 +1,211 @@
+---
+import type { Service } from "../data/services";
+import { siteConfig } from "../config/site";
+import { buildWhatsAppUrl } from "../utils/whatsapp";
+
+interface Props {
+  services: Service[];
+}
+
+const { services } = Astro.props;
+const serviceOptions = services.map((s) => ({ id: s.id, name: s.name, price: s.price }));
+const defaultUrl = buildWhatsAppUrl();
+---
+
+<form
+  id="booking-form"
+  data-wa-number={siteConfig.whatsapp}
+  data-default-url={defaultUrl}
+  class="reveal mt-10 rounded-card border border-secondary bg-white/70 p-6 sm:p-8"
+  novalidate
+>
+
+  <div class="grid gap-5 sm:grid-cols-2">
+    <div class="flex flex-col gap-1.5">
+      <label for="bf-name" class="text-sm font-medium text-text">Name <span class="text-primary">*</span></label>
+      <input
+        type="text"
+        id="bf-name"
+        name="name"
+        required
+        autocomplete="name"
+        placeholder="Your name"
+        class="h-12 rounded-lg border border-secondary bg-background px-4 text-base outline-none transition-colors focus:border-primary"
+      />
+      <p id="bf-name-error" class="hidden text-sm text-red-700" role="alert"></p>
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label for="bf-phone" class="text-sm font-medium text-text">WhatsApp Number <span class="text-primary">*</span></label>
+      <input
+        type="tel"
+        id="bf-phone"
+        name="phone"
+        required
+        inputmode="tel"
+        autocomplete="tel"
+        placeholder="0812xxxxxxx"
+        class="h-12 rounded-lg border border-secondary bg-background px-4 text-base outline-none transition-colors focus:border-primary"
+      />
+      <p id="bf-phone-error" class="hidden text-sm text-red-700" role="alert"></p>
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label for="bf-service" class="text-sm font-medium text-text">Service <span class="text-primary">*</span></label>
+      <select
+        id="bf-service"
+        name="service"
+        required
+        class="h-12 rounded-lg border border-secondary bg-background px-4 text-base outline-none transition-colors focus:border-primary"
+      >
+        <option value="">Select a service</option>
+        {serviceOptions.map((s) => <option value={s.name}>{s.name} — {s.price}</option>)}
+      </select>
+      <p id="bf-service-error" class="hidden text-sm text-red-700" role="alert"></p>
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label for="bf-design" class="text-sm font-medium text-text">Design Preference</label>
+      <input
+        type="text"
+        id="bf-design"
+        name="design"
+        placeholder="Reference, style, or link"
+        class="h-12 rounded-lg border border-secondary bg-background px-4 text-base outline-none transition-colors focus:border-primary"
+      />
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label for="bf-date" class="text-sm font-medium text-text">Preferred Date</label>
+      <input
+        type="date"
+        id="bf-date"
+        name="date"
+        class="h-12 rounded-lg border border-secondary bg-background px-4 text-base outline-none transition-colors focus:border-primary"
+      />
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label for="bf-time" class="text-sm font-medium text-text">Preferred Time</label>
+      <input
+        type="time"
+        id="bf-time"
+        name="time"
+        class="h-12 rounded-lg border border-secondary bg-background px-4 text-base outline-none transition-colors focus:border-primary"
+      />
+    </div>
+
+    <div class="flex flex-col gap-1.5 sm:col-span-2">
+      <label for="bf-notes" class="text-sm font-medium text-text">Additional Notes</label>
+      <textarea
+        id="bf-notes"
+        name="notes"
+        rows="3"
+        placeholder="Allergies, special requests, etc."
+        class="rounded-lg border border-secondary bg-background px-4 py-3 text-base outline-none transition-colors focus:border-primary"
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="mt-6 flex flex-col items-center gap-4">
+    <button type="submit" class="btn btn-primary w-full sm:w-auto">
+      Send Booking via WhatsApp
+    </button>
+    <p class="text-xs text-text/55">
+      Not a real-time scheduler — we'll confirm availability manually on WhatsApp.
+    </p>
+  </div>
+
+  <p
+    id="bf-success"
+    class="mt-5 hidden rounded-lg border border-accent bg-accent/15 px-4 py-3 text-center text-sm font-medium text-text"
+    role="status"
+  >
+    Booking received! We'll contact you via WhatsApp to confirm your appointment.
+  </p>
+</form>
+
+<script>
+  const form = document.getElementById("booking-form") as HTMLFormElement;
+  const success = document.getElementById("bf-success")!;
+
+  const showError = (id: string, message: string) => {
+    const input = document.getElementById(`bf-${id}`)!;
+    const error = document.getElementById(`bf-${id}-error`)!;
+    if (message) {
+      input.setAttribute("aria-invalid", "true");
+      input.setAttribute("aria-describedby", `bf-${id}-error`);
+      error.textContent = message;
+      error.classList.remove("hidden");
+    } else {
+      input.removeAttribute("aria-invalid");
+      input.removeAttribute("aria-describedby");
+      error.textContent = "";
+      error.classList.add("hidden");
+    }
+  };
+
+  const validate = (): boolean => {
+    const name = form.elements.namedItem("name") as HTMLInputElement;
+    const phone = form.elements.namedItem("phone") as HTMLInputElement;
+    const service = form.elements.namedItem("service") as HTMLSelectElement;
+    let ok = true;
+
+    if (!name.value.trim()) {
+      showError("name", "Please enter your name.");
+      ok = false;
+    } else showError("name", "");
+
+    const digits = phone.value.replace(/[^\d+]/g, "");
+    if (!/^\+?\d{9,15}$/.test(digits)) {
+      showError("phone", "Please enter a valid WhatsApp number.");
+      ok = false;
+    } else showError("phone", "");
+
+    if (!service.value) {
+      showError("service", "Please select a service.");
+      ok = false;
+    } else showError("service", "");
+
+    if (!ok) form.querySelector<HTMLElement>("[aria-invalid='true']")?.focus();
+    return ok;
+  };
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const data = new FormData(form);
+    const fields = {
+      service: String(data.get("service") ?? ""),
+      design: String(data.get("design") ?? ""),
+      date: String(data.get("date") ?? ""),
+      time: String(data.get("time") ?? ""),
+      name: String(data.get("name") ?? ""),
+      notes: String(data.get("notes") ?? ""),
+    };
+
+    const phoneDigits = String(data.get("phone") ?? "").replace(/[^\d]/g, "");
+    const waNumber = form.dataset.waNumber ?? "";
+
+    const template = [
+      "Halo, saya ingin booking nail art.",
+      "",
+      `Service: ${fields.service || "..."}`,
+      `Design: ${fields.design || "..."}`,
+      `Tanggal: ${fields.date || "..."}`,
+      `Jam: ${fields.time || "..."}`,
+      `Nama: ${fields.name || "..."}`,
+      `No. WhatsApp: ${phoneDigits}`,
+    ];
+    if (fields.notes) template.push(`Catatan: ${fields.notes}`);
+
+    const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(template.join("\n"))}`;
+
+    success.classList.remove("hidden");
+    success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    window.setTimeout(() => {
+      window.location.href = url;
+    }, 900);
+  });
+</script>

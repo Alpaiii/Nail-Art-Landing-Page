@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs><linearGradient id="fbBg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F5EAE6"/><stop offset="1" stop-color="#E8D5D5"/>
+  </linearGradient></defs>
+  
+    <rect width="800" height="600" fill="url(#fbBg)"/>
+    <circle cx="400" cy="270" r="90" fill="#FFF9F7" stroke="#C9A46C" stroke-width="3"/>
+    <text x="400" y="292" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#B78B8B">SN</text>
+    <text x="400" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#2B2525">Signature Nails</text>
+    <path d="M 560 152 Q 562.16 167.84 578 170
+    Q 562.16 172.16 560 188
+    Q 557.84 172.16 542 170
+    Q 557.84 167.84 560 152 Z" fill="#C9A46C" opacity="1"/><path d="M 235 336 Q 236.68 348.32 249 350
+    Q 236.68 351.68 235 364
+    Q 233.32 351.68 221 350
+    Q 233.32 348.32 235 336 Z" fill="#B78B8B" opacity="0.8"/>
+</svg>

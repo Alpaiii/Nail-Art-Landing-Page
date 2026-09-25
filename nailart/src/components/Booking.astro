@@ -1,0 +1,37 @@
+---
+import { siteConfig } from "../config/site";
+import { buildWhatsAppUrl } from "../utils/whatsapp";
+import { services } from "../data/services";
+import BookingForm from "./BookingForm.astro";
+
+const bookUrl = buildWhatsAppUrl();
+const showForm = siteConfig.features.bookingForm;
+---
+
+<section id="booking" class="section bg-background">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="section-eyebrow">Booking</p>
+      <h2 class="section-title">Book your appointment</h2>
+      <p class="section-lead mx-auto">
+        WhatsApp is our booking channel — tell us your service, preferred date, and design, and we'll
+        confirm your slot personally.
+      </p>
+    </div>
+
+    {
+      !showForm && (
+        <div class="reveal mt-10 flex flex-col items-center gap-4 rounded-card border border-secondary bg-white/70 p-8 text-center">
+          <p class="text-text/70">
+            Send us a message and our team will confirm your appointment shortly.
+          </p>
+          <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full sm:w-auto">
+            Book via WhatsApp
+          </a>
+        </div>
+      )
+    }
+
+    {showForm && <BookingForm services={services} />}
+  </div>
+</section>

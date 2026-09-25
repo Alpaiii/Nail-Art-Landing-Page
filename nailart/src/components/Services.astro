@@ -1,0 +1,20 @@
+---
+import { serviceCards } from "../data/services";
+import ServiceCard from "./ServiceCard.astro";
+---
+
+<section id="services" class="section bg-secondary/40">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="section-eyebrow">Our Services</p>
+      <h2 class="section-title">Treatments crafted for your nails</h2>
+      <p class="section-lead mx-auto">
+        From clean classic care to fully custom art — every service starts with a proper consultation.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {serviceCards.map((service) => <ServiceCard service={service} />)}
+    </div>
+  </div>
+</section>

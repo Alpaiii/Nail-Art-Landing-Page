@@ -1,0 +1,53 @@
+---
+import { siteConfig } from "../config/site";
+import { instagramPreview } from "../data/gallery";
+---
+
+{
+  siteConfig.features.instagramSection && (
+    <section id="instagram" class="section bg-secondary/40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow">Instagram</p>
+          <h2 class="section-title">Follow Our Nail Journey</h2>
+          <p class="section-lead mx-auto">
+            Fresh sets, behind-the-scenes, and design drops — see them first on{" "}
+            <span class="font-medium text-text">{siteConfig.instagram}</span>.
+          </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-3 gap-3 sm:gap-4 md:grid-cols-6">
+          {instagramPreview.map((item) => (
+            <a
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block overflow-hidden rounded-card border border-secondary"
+              aria-label={`View ${item.title} on Instagram`}
+            >
+              <img
+                src={item.image}
+                alt={`${item.title} — recent work on Instagram`}
+                width="800"
+                height="800"
+                loading="lazy"
+                class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </a>
+          ))}
+        </div>
+
+        <div class="reveal mt-9 text-center">
+          <a
+            href={siteConfig.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Follow on Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}

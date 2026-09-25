@@ -1,0 +1,77 @@
+---
+import type { FAQItem as FAQItemType } from "../data/faq";
+
+interface Props {
+  item: FAQItemType;
+}
+
+const { item } = Astro.props;
+const panelId = `faq-panel-${item.id}`;
+const buttonId = `faq-button-${item.id}`;
+---
+
+<div class="faq-item">
+  <h3>
+    <button
+      id={buttonId}
+      type="button"
+      class="faq-button flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-base font-medium text-text transition-colors hover:bg-secondary/40 sm:px-7"
+      aria-expanded="false"
+      aria-controls={panelId}
+    >
+      <span>{item.question}</span>
+      <svg
+        class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-300"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M6 9l6 6 6-6"></path>
+      </svg>
+    </button>
+  </h3>
+  <div
+    id={panelId}
+    role="region"
+    aria-labelledby={buttonId}
+    class="faq-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out"
+    aria-hidden="true"
+  >
+    <div class="overflow-hidden">
+      <p class="px-5 pb-5 text-sm leading-relaxed text-text/75 sm:px-7">{item.answer}</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>(".faq-button"));
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+
+      // Single-open accordion (PRD §8.12 / Assumption 3)
+      buttons.forEach((other) => {
+        const panel = document.getElementById(other.getAttribute("aria-controls") ?? "");
+        other.setAttribute("aria-expanded", "false");
+        other.querySelector(".faq-chevron")?.classList.remove("rotate-180");
+        panel?.classList.remove("grid-rows-[1fr]");
+        panel?.classList.add("grid-rows-[0fr]");
+        panel?.setAttribute("aria-hidden", "true");
+      });
+
+      if (!isOpen) {
+        const panel = document.getElementById(button.getAttribute("aria-controls") ?? "");
+        button.setAttribute("aria-expanded", "true");
+        button.querySelector(".faq-chevron")?.classList.add("rotate-180");
+        panel?.classList.remove("grid-rows-[0fr]");
+        panel?.classList.add("grid-rows-[1fr]");
+        panel?.setAttribute("aria-hidden", "false");
+      }
+    });
+  });
+</script>

@@ -1,0 +1,164 @@
+---
+import { galleryItems } from "../data/gallery";
+import { buildWhatsAppUrl } from "../utils/whatsapp";
+import GalleryFilter from "./GalleryFilter.astro";
+import GalleryLightbox from "./GalleryLightbox.astro";
+---
+
+<section id="gallery" class="section bg-secondary/40">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="section-eyebrow">Portfolio</p>
+      <h2 class="section-title">Our Latest Creations</h2>
+      <p class="section-lead mx-auto">
+        Real sets from our studio — tap any design to view it larger and book it directly.
+      </p>
+    </div>
+
+    <GalleryFilter />
+
+    <div id="gallery-grid" class="mt-9 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+      {
+        galleryItems.map((item) => (
+          <button
+            type="button"
+            class="gallery-item group relative overflow-hidden rounded-card border border-secondary bg-white/70 text-left transition-transform duration-300 hover:-translate-y-1"
+            data-category={item.category}
+            data-image={item.image}
+            data-title={item.title}
+            data-category-label={item.category}
+            data-price={item.price ?? ""}
+            data-wa-url={buildWhatsAppUrl({ design: item.title })}
+            aria-label={`View ${item.title} (${item.category})`}
+          >
+            <img
+              src={item.image}
+              alt={`${item.title} — ${item.category} nail art design`}
+              width="800"
+              height="800"
+              loading="lazy"
+              class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <span class="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between gap-2 bg-background/95 px-3 py-2.5 text-xs transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0">
+              <span class="font-medium text-text">{item.title}</span>
+              <span class="text-text/55">{item.category}</span>
+            </span>
+          </button>
+        ))
+      }
+    </div>
+
+    <p id="gallery-empty" class="mt-10 hidden text-center text-text/60">
+      No designs in this category yet.
+    </p>
+  </div>
+
+  <GalleryLightbox />
+</section>
+
+<script>
+  const filterBtns = Array.from(document.querySelectorAll<HTMLButtonElement>(".filter-btn"));
+  const items = Array.from(document.querySelectorAll<HTMLButtonElement>(".gallery-item"));
+  const emptyMsg = document.getElementById("gallery-empty");
+  const lightbox = document.getElementById("lightbox")!;
+  const img = document.getElementById("lightbox-img") as HTMLImageElement;
+  const title = document.getElementById("lightbox-title")!;
+  const category = document.getElementById("lightbox-category")!;
+  const price = document.getElementById("lightbox-price")!;
+  const bookLink = document.getElementById("lightbox-book") as HTMLAnchorElement;
+  const closeBtn = document.getElementById("lightbox-close")!;
+  const prevBtn = document.getElementById("lightbox-prev")!;
+  const nextBtn = document.getElementById("lightbox-next")!;
+
+  let activeFilter = "All";
+  let currentIndex = 0;
+  let lastTrigger: HTMLElement | null = null;
+
+  const visibleItems = () => items.filter((item) => !item.classList.contains("hidden"));
+
+  /* ---- Category filter (PRD §8.5 — no page reload) ---- */
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      activeFilter = btn.dataset.filter ?? "All";
+      filterBtns.forEach((b) => {
+        const active = b === btn;
+        b.setAttribute("aria-pressed", String(active));
+        b.classList.toggle("bg-accent", active);
+        b.classList.toggle("text-text", active);
+        b.classList.toggle("border-accent", active);
+        b.classList.toggle("bg-white/70", !active);
+        b.classList.toggle("text-text/70", !active);
+        b.classList.toggle("border-secondary", !active);
+      });
+      items.forEach((item) => {
+        const show = activeFilter === "All" || item.dataset.category === activeFilter;
+        item.classList.toggle("hidden", !show);
+      });
+      emptyMsg?.classList.toggle("hidden", visibleItems().length > 0);
+    });
+  });
+
+  // Initial active state (All)
+  filterBtns[0]?.click();
+
+  /* ---- Lightbox ---- */
+  const fill = (index: number) => {
+    const visible = visibleItems();
+    if (visible.length === 0) return;
+    currentIndex = (index + visible.length) % visible.length;
+    const item = visible[currentIndex];
+    img.src = item.dataset.image ?? "";
+    img.alt = `${item.dataset.title} — ${item.dataset.categoryLabel} nail art design`;
+    title.textContent = item.dataset.title ?? "";
+    category.textContent = item.dataset.categoryLabel ?? "";
+    const itemPrice = item.dataset.price ?? "";
+    price.textContent = itemPrice;
+    price.classList.toggle("hidden", !itemPrice);
+    bookLink.href = item.dataset.waUrl ?? "#";
+  };
+
+  const open = (trigger: HTMLButtonElement) => {
+    const visible = visibleItems();
+    lastTrigger = trigger;
+    fill(visible.indexOf(trigger));
+    lightbox.classList.remove("hidden");
+    lightbox.classList.add("flex");
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  };
+
+  const close = () => {
+    lightbox.classList.add("hidden");
+    lightbox.classList.remove("flex");
+    document.body.style.overflow = "";
+    lastTrigger?.focus();
+  };
+
+  items.forEach((item) => item.addEventListener("click", () => open(item)));
+  closeBtn.addEventListener("click", close);
+  prevBtn.addEventListener("click", () => fill(currentIndex - 1));
+  nextBtn.addEventListener("click", () => fill(currentIndex + 1));
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.classList.contains("hidden")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") fill(currentIndex - 1);
+    if (e.key === "ArrowRight") fill(currentIndex + 1);
+    if (e.key === "Tab") {
+      const focusables = lightbox.querySelectorAll<HTMLElement>("a[href], button");
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+</script>

@@ -49,14 +49,14 @@ export interface BusinessConfig {
 }
 
 export const siteConfig: BusinessConfig = {
-  name: "Signature Nails",
-  tagline: "Your Nails, Your Signature.",
+  name: "Roquace",
+  tagline: "Your Nails, Your Art.",
   description:
-    "Elegant nail art crafted to make every detail of your style unforgettable. Premium nail salon offering manicure, gel polish, custom nail art, and extensions.",
-  logo: "/images/logo.svg",
+    "Premium nail art studio crafting elegant designs that express your unique style. Manicure, gel polish, custom nail art, and extensions.",
+  logo: "/images/Logo-TM.png",
   phone: "+62 857-1733-7393",
   whatsapp: "6285717337393",
-  instagram: "@signature.nails",
+  instagram: "@roquace.nails",
   instagramUrl: "https://www.instagram.com/",
   address: "Jl. Melati No. 42, Kebayoran Baru",
   city: "Jakarta Selatan",
@@ -64,17 +64,17 @@ export const siteConfig: BusinessConfig = {
   openingHours: "Monday – Saturday, 10:00 – 20:00",
   openingHoursSchema: "Mo-Sa 10:00-20:00",
   googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Jl.+Mawar+No.+42,+Jakarta+Selatan",
-  site: "https://signature-nails.vercel.app",
+  site: "https://roquace.vercel.app",
   meta: {
-    title: "Signature Nails — Nail Art & Nail Salon in Jakarta",
+    title: "Roquace — Premium Nail Art & Nail Salon in Jakarta",
     description:
       "Premium nail art studio in Jakarta. Explore our portfolio, transparent pricing, and book your appointment easily via WhatsApp.",
     image: "/images/og-cover.png",
   },
   hero: {
-    headline: "Your Nails, Your Signature.",
+    headline: "Your Nails, Your Art.",
     subheadline:
-      "Elegant nail art crafted to make every detail of your style unforgettable.",
+      "Premium nail art crafted to make every detail of your style unforgettable.",
     image: "/images/hero/hero.svg",
     imageAlt: "Elegant almond-shaped nail art in dusty rose and gold tones",
     showStats: true,

@@ -33,13 +33,14 @@ const menu = [
     </ul>
 
     <div class="flex items-center gap-2">
-      <a href="#booking" class="btn btn-primary hidden !px-5 !py-2.5 text-sm md:inline-flex">
-        Book Appointment
+      <a href="#booking" class="btn btn-primary !px-3 !py-2 text-sm sm:!px-5 sm:!py-2.5">
+        <span class="sm:hidden">Book Now</span>
+        <span class="hidden sm:inline">Book Appointment</span>
       </a>
       <button
         id="menu-toggle"
         type="button"
-        class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-text md:hidden"
+        class="relative z-[60] inline-flex h-11 w-11 items-center justify-center rounded-lg text-text md:hidden"
         aria-label="Open menu"
         aria-controls="mobile-menu"
         aria-expanded="false"
@@ -119,6 +120,9 @@ const menu = [
     menu.classList.toggle("translate-x-full", !open);
     menu.toggleAttribute("inert", !open);
     overlay.classList.toggle("hidden", !open);
+    // Prevent keyboard focus escaping to the page behind the open drawer
+    document.querySelector("main")?.toggleAttribute("inert", open);
+    document.querySelector("footer")?.toggleAttribute("inert", open);
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     iconOpen.classList.toggle("hidden", open);

@@ -12,7 +12,9 @@
     "astro": "astro",
     "check": "astro check",
     "format": "prettier --write .",
-    "placeholders": "node scripts/generate-placeholders.mjs"
+    "placeholders": "node scripts/generate-placeholders.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "seo:ci": "astro build && lighthouse ci --config=./lighthouserc.json"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

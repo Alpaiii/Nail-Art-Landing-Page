@@ -54,8 +54,8 @@ export const siteConfig: BusinessConfig = {
   description:
     "Elegant nail art crafted to make every detail of your style unforgettable. Premium nail salon offering manicure, gel polish, custom nail art, and extensions.",
   logo: "/images/logo.svg",
-  phone: "+62 812-3456-7890",
-  whatsapp: "6281234567890",
+  phone: "+62 857-1733-7393",
+  whatsapp: "6285717337393",
   instagram: "@signature.nails",
   instagramUrl: "https://www.instagram.com/",
   address: "Jl. Melati No. 42, Kebayoran Baru",

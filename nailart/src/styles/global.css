@@ -46,6 +46,19 @@
     border-radius: 2px;
   }
 
+  /* Keep anchor targets clear of the fixed navbar (PRD §8.1) */
+  section[id],
+  main[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    section[id],
+    main[id] {
+      scroll-margin-top: 5.75rem;
+    }
+  }
+
   img {
     max-width: 100%;
     height: auto;

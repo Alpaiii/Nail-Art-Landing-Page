@@ -53,7 +53,7 @@ export const siteConfig: BusinessConfig = {
   tagline: "Your Nails, Your Art.",
   description:
     "Premium nail art studio crafting elegant designs that express your unique style. Manicure, gel polish, custom nail art, and extensions.",
-  logo: "/images/logo.svg",
+  logo: "/images/Logo-Black-transparant-TM.png",
   phone: "+62 857-1733-7393",
   whatsapp: "6285717337393",
   instagram: "@roquace.nails",
